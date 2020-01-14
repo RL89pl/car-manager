@@ -46,8 +46,7 @@ def showStats(database, car_id):
         select_query = """SELECT * from stats WHERE car_id = {}""".format(car_id)
         cursor.execute(select_query)
         records = cursor.fetchall()
-        print("Total rows are:  ", len(records))
-        print("Printing each row")
+        print("Ilość rekordów:  ", len(records))
         for row in records:
             print("Id: ", row[0])
             print("Data: ", row[1]) 
